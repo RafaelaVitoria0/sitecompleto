@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header>
+        <h1>Élégance</h1>
+       <a href="index.html"><img src="imagens/Logo.png" alt="elegance"></a>
+    <nav>
+        <a href="index.html" target="_blank" rel="inicio">Início</a>
+        <a href="produto.html" target="_blank" rel="roupas">Roupas</a>
+       <a href="contato.html" target="_blank" rel="quiz">Contato</a>
+    </nav>
+    </header>
+    <section class="quiz-section">
+        <h2>Quiz sobre as roupas</h2>
+        <form id="quiz-form">
+            <section class="question">
+                <h3>1. Roupas esportivas são mais adequadas para uma prática de yoga.</h3>
+                <label><input type="radio" name="q1" value="A" onclick="disableOptions('q1'), playSound()">A) Verdadeiro</label><br>
+                <label><input type="radio" name="q1" value="B" onclick="disableOptions('q1'), playSound()">B) Falso</label><br>
+            </section>
+
+            <section class="question">
+                <h3>2. Um pijama é a escolha ideal para um evento formal.</h3>
+                <label><input type="radio" name="q2" value="A" onclick="disableOptions('q2'), playSound()">A) Verdadeiro</label><br>
+                <label><input type="radio" name="q2" value="B" onclick="disableOptions('q2'), playSound()">B) Falso</label><br>
+            </section>
+
+            <section class="question">
+                <h3>3. Vestidos são frequentemente usados em festas e eventos especiais.</h3>
+                <label><input type="radio" name="q3" value="A" onclick="disableOptions('q3'), playSound()">A) Verdadeiro</label><br>
+                <label><input type="radio" name="q3" value="B" onclick="disableOptions('q3'), playSound()">B) Falso</label><br>
+            </section>
+
+            <section class="question">
+                <h3>4. Roupas esportivas são perfeitas para relaxar em casa.</h3>
+                <label><input type="radio" name="q4" value="A" onclick="disableOptions('q4'), playSound()">A) Verdadeiro</label><br>
+                <label><input type="radio" name="q4" value="B" onclick="disableOptions('q4'), playSound()">B) Falso</label><br>
+            </section>
+
+            <section class="question">
+                <h3>5. Uma saia é uma boa escolha para um encontro casual.</h3>
+                <label><input type="radio" name="q5" value="A" onclick="disableOptions('q5'), playSound()">A) Verdadeiro</label><br>
+                <label><input type="radio" name="q5" value="B" onclick="disableOptions('q5'), playSound()">B) Falso</label><br>
+            </section>
+
+            <section class="question">
+                <h3>6. Calças são mais indicadas para dias quentes e ensolarados.</h3>
+                <label><input type="radio" name="q6" value="A" onclick="disableOptions('q6'), playSound()">A) Verdadeiro</label><br>
+                <label><input type="radio" name="q6" value="B" onclick="disableOptions('q6'), playSound()">B) Falso</label><br>
+            </section>
+
+            <section class="question">
+                <h3>7. Você deve usar um vestido para correr ao ar livre.</h3>
+                <label><input type="radio" name="q7" value="A" onclick="disableOptions('q7'), playSound()">A) Verdadeiro</label><br>
+                <label><input type="radio" name="q7" value="B" onclick="disableOptions('q7'), playSound()">B) Falso</label><br>
+            </section>
+
+            <section class="question">
+                <h3>8. Pijamas são ideais para dormir e relaxar em casa.</h3>
+                <label><input type="radio" name="q8" value="A" onclick="disableOptions('q8'), playSound()">A) Verdadeiro</label><br>
+                <label><input type="radio" name="q8" value="B" onclick="disableOptions('q8'), playSound()">B) Falso</label><br>
+            </section>
+
+            <section class="question">
+            <h3>9. Roupas esportivas são a escolha ideal para atividades físicas intensas.</h3>
+            <label><input type="radio" name="q9" value="A" onclick="disableOptions('q9'), playSound()">A) Verdadeiro</label><br>
+            <label><input type="radio" name="q9" value="B" onclick="disableOptions('q9'), playSound()">B) Falso</label><br>
+        </section>
+
+        <section class="question">
+            <h3>10. Vestidos são a melhor opção para um treino na academia.</h3>
+            <label><input type="radio" name="q10" value="A" onclick="disableOptions('q10'), playSound()">A) Verdadeiro</label><br>
+            <label><input type="radio" name="q10" value="B" onclick="disableOptions('q10'), playSound()">B) Falso</label><br>
+        </section>
+
+        
+            <!-- repita a estrutura acima para as outras perguntas -->
+            
+            <button type="button" id="enviar" onclick="submitQuiz()">Enviar resposta</button>
+            <button type="button" id="reenviar" onclick="replayQuiz()" disabled>Responder novamente</button>
+        </form>
+
+            <audio id="venceusom" src="som/venceu.mp3" preload="auto"></audio>
+            <audio id="selecionarsom" src="som/seleciona.mp3" preload="auto"></audio>
+            <audio id="perdeusom" src="som/perdeu.mp3" preload="auto"></audio>
+
+            <section id="result"></section>
+        
+    </section>
+
+        <script src="script.js"></script>    
+                
+
+</body>
+</html>

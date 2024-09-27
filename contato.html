@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contato</title>
+</head>
+<body>
+   <header>
+    <h1>Élégance</h1>
+    <a href="index.html"><img src="imagens/Logo.png" alt="elegance">
+    <nav>
+        <a href="index.html" target="_blank" rel="roupas">Início</a>
+        <a href="produto.html" target="_blank" rel="contato">Roupas</a>
+       <a href="quiz.html" target="_blank" rel="quiz">Quiz</a>
+    </nav>
+   </header>
+   <section>
+         <div class="nos">
+            <legend>Sobre Nós:</legend>
+            <h5>TELEFONE:(14) 99822-7154</h5>
+            <h5>EMAIL: rafaela.fabricio@aluno.senai.br</h5>
+            <h5>ENDEREÇO: Av. Rebouças, 3970 - Pinheiros, São Paulo - SP, 05402-600</h5>
+         </div>
+          <div class="forms">
+            <form action="https://formsubmit.co/rafaela.fabricio@aluno.senai.br" method="POST">
+                <!-- <legend>há dúvidas?</legend> -->
+                 <legend>Entre em Contato:</legend>
+                <label>NOME:</label>
+                <input type="text" name="name" required>
+                <label>EMAIL:</label>
+                <input type="email" name="email" required>
+                <label>TELEFONE:</label>
+                <input type="tel" id="telefone" name="usuario_telefone" oninput="formatPhoneNumber(this)" maxlength="15" placeholder="( ) _____-____"/>
+                <label for="question1">MENSAGEM:</label>
+                <input type="text" id="question1" name="question1" required>
+                <button type="submit">ENVIAR</button>
+           </form>
+        </div>     
+    </section>
+</body>
+</html>
